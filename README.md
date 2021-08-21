@@ -1,1 +1,4 @@
-# Void Setup
+# Index
+
+* [Windows](windows.md)
+
