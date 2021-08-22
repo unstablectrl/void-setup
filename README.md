@@ -1,4 +1,8 @@
 # Index
 
-* [Windows](windows.md)
+{% page-ref page="ubunto.md" %}
+
+{% page-ref page="windows.md" %}
+
+
 
