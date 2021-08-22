@@ -59,6 +59,30 @@ git clone https://github.com/zsh-users/zsh-syntax-highlighting.git $ZSH_CUSTOM/p
 sudo apt install git-all
 ```
 
+```bash
+git config --global core.excludesfile "~/.gitignore_global"
+git config --global user.name "João Barreiros"
+git config --global user.email "unstablectrl@gmail.com"
+```
+
+{% tabs %}
+{% tab title="Ubuntu" %}
+```bash
+git config --global core.editor "code"
+```
+{% endtab %}
+
+{% tab title="WSL2" %}
+```bash
+git config --global core.editor "code --wait"
+```
+{% endtab %}
+{% endtabs %}
+
+```bash
+echo "venv\n.python-version" > ~/.gitignore_global
+```
+
 ### Pyenv
 
 * [Github](https://github.com/pyenv/pyenv)
