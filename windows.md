@@ -16,6 +16,8 @@ Install [winget](https://docs.microsoft.com/en-us/windows/package-manager/winget
 
 [Fira Code](https://github.com/tonsky/FiraCode/wiki/Installing#windows)
 
+[Nerd Fonts](https://www.nerdfonts.com/)
+
 ## Windows Terminal
 
 [Current Settings](https://gist.github.com/unstablectrl/4b0e8f081d0487c3b2c1b96fa3f4dac0)
@@ -31,4 +33,20 @@ Restore Settings
 ```text
 Invoke-WebRequest -Uri "https://gist.githubusercontent.com/unstablectrl/4b0e8f081d0487c3b2c1b96fa3f4dac0/raw/e3a00cc32593f13d265614743c4ae6e969a42552/settings.json" -OutFile "$env:LOCALAPPDATA\Packages\Microsoft.WindowsTerminal_8wekyb3d8bbwe\LocalState\settings.json"
 ```
+
+### PowerShell
+
+[Oh My Posh](https://ohmyposh.dev/docs/)
+
+```bash
+ Install-Module -Name PSReadLine -Scope CurrentUser -Force -SkipPublisherCheck
+```
+
+{% code title="~/Documents/WindowsPowerShell/Microsoft.PowerShell\_profile.ps1" %}
+```bash
+Import-Module posh-git
+Import-Module oh-my-posh
+Set-Theme Paradox
+```
+{% endcode %}
 

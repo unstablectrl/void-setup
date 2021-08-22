@@ -8,14 +8,6 @@ Default Package Manager [Apt](https://ubuntu.com/server/docs/package-management)
 sudo apt update && sudo apt upgrade -y
 ```
 
-Other upgrade commands
-
-```bash
-sudo apt dist-upgrade -y
-sudo apt autoremove -y
-sudo apt full-upgrade -y
-```
-
 ## Oh My Zsh
 
 Installing [Zsh](https://github.com/ohmyzsh/ohmyzsh/wiki/Installing-ZSH)
@@ -166,18 +158,5 @@ curl https://cli-assets.heroku.com/install.sh | sh
 
 ```bash
 heroku login
-```
-
-## Vim
-
-### Theme
-
-```bash
-wget  -P ~/.vim/colors/ "https://raw.githubusercontent.com/BarretRen/vim-colorscheme/master/colors/monokai.vim"
-```
-
-```text
-syntax on
-colorscheme monokai
 ```
 
