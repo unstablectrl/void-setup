@@ -168,3 +168,16 @@ curl https://cli-assets.heroku.com/install.sh | sh
 heroku login
 ```
 
+## Vim
+
+### Theme
+
+```bash
+wget  -P ~/.vim/colors/ "https://raw.githubusercontent.com/BarretRen/vim-colorscheme/master/colors/monokai.vim"
+```
+
+```text
+syntax on
+colorscheme monokai
+```
+
