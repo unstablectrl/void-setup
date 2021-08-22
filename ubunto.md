@@ -2,7 +2,7 @@
 
 ## Ubuntu Package Manager
 
-[Apt](https://ubuntu.com/server/docs/package-management)
+Default Package Manager [Apt](https://ubuntu.com/server/docs/package-management)
 
 ```bash
 sudo apt update && sudo apt upgrade -y
@@ -22,9 +22,11 @@ Installing [Oh My Zsh](https://github.com/ohmyzsh/ohmyzsh#basic-installation)
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
 ```
 
-[.zshrc](https://gist.github.com/unstablectrl/12351f8d50b265652e0a300c378f4a8a)
+My config [.zshrc](https://gist.github.com/unstablectrl/12351f8d50b265652e0a300c378f4a8a)
 
 ### **Theme**
+
+`unstable`
 
 ```bash
 curl "https://gist.githubusercontent.com/unstablectrl/bdbf55d4600441665198347b714d82ec/raw/5a35ad413e096564ccb7c839b2ba68de3a6df736/unstable.zsh-theme" -o "$ZSH_CUSTOM/themes/unstable.zsh-theme" --create-dirs
@@ -53,7 +55,7 @@ git clone https://github.com/zsh-users/zsh-syntax-highlighting.git $ZSH_CUSTOM/p
 ### Git
 
 * [Install Git](https://git-scm.com/book/en/v2/Getting-Started-Installing-Git)
-* [Oh My Zsh Plugin](https://github.com/ohmyzsh/ohmyzsh/tree/master/plugins/git)
+* [Oh My Zsh Plugin](https://github.com/ohmyzsh/ohmyzsh/tree/master/plugins/git) - `git`
 
 ```bash
 sudo apt install git-all
@@ -86,7 +88,7 @@ echo "venv\n.python-version" > ~/.gitignore_global
 ### Pyenv
 
 * [Github](https://github.com/pyenv/pyenv)
-* [Oh My Zsh Plugin](https://github.com/ohmyzsh/ohmyzsh/tree/master/plugins/pyenv)
+* [Oh My Zsh Plugin](https://github.com/ohmyzsh/ohmyzsh/tree/master/plugins/pyenv) - `pyenv`
 
 ```bash
 sudo apt-get update; sudo apt-get install make build-essential libssl-dev zlib1g-dev \
@@ -101,7 +103,7 @@ curl https://pyenv.run | bash
 ### Nvm
 
 * [Github](https://github.com/nvm-sh/nvm)
-* [Oh My Zsh Plugin](https://github.com/ohmyzsh/ohmyzsh/tree/master/plugins/nvm)
+* [Oh My Zsh Plugin](https://github.com/ohmyzsh/ohmyzsh/tree/master/plugins/nvm) - `nvm`
 
 ```bash
 curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.38.0/install.sh | bash
@@ -110,9 +112,51 @@ curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.38.0/install.sh | bash
 ### fzf
 
 * [Github](https://github.com/junegunn/fzf)
-* [Oh My Zsh Plugin](https://github.com/ohmyzsh/ohmyzsh/tree/master/plugins/fzf)
+* [Oh My Zsh Plugin](https://github.com/ohmyzsh/ohmyzsh/tree/master/plugins/fzf) - `fzf`
 
 ```bash
 sudo apt-get install fzf
+```
+
+### Aws Cli
+
+* [Website](https://docs.aws.amazon.com/cli/latest/userguide/install-cliv2-linux.html)
+* [Oh My Zsh Plugin](https://github.com/ohmyzsh/ohmyzsh/tree/master/plugins/aws) - `aws`
+
+```bash
+curl "https://awscli.amazonaws.com/awscli-exe-linux-x86_64.zip" -o "awscliv2.zip"
+unzip awscliv2.zip
+sudo ./aws/install
+```
+
+{% code title="~/.aws/config" %}
+```bash
+[default]
+
+[profile profilename]
+region = ...
+output = ...
+```
+{% endcode %}
+
+{% code title="~/.aws/credentials" %}
+```bash
+[profilename]
+aws_access_key_id = ...
+aws_secret_access_key = ...
+```
+{% endcode %}
+
+### Heroku Cli
+
+* [Website](https://devcenter.heroku.com/articles/heroku-cli)
+* [Oh My Zsh Plugin](https://github.com/ohmyzsh/ohmyzsh/tree/master/plugins/heroku) - `heroku`
+
+```bash
+curl https://cli-assets.heroku.com/install.sh | sh
+```
+
+```bash
+heroku login
 ```
 
