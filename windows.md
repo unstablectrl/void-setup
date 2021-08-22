@@ -6,7 +6,7 @@
 
 Install [winget](https://docs.microsoft.com/en-us/windows/package-manager/winget/#install-winget)
 
-### Apps
+## Apps
 
 [winstall](https://winstall.app) \(Unofficial Store\)
 
