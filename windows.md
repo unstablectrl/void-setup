@@ -13,7 +13,7 @@ Get-DnsClient
 Get-DnsClientServerAddress -InterfaceAlias "Ethernet"
 ```
 
-Setup [Cloudflare DNS](https://1.1.1.1/dns/)
+Setup [Cloudflare DNS](https://1.1.1.1/dns/) \(Open Terminal with Elevated Privileges\) 
 
 ```bash
 Set-DnsClientServerAddress -InterfaceAlias "Ethernet" -ServerAddresses ("1.1.1.1","1.0.0.1", "2606:4700:4700::1111", "2606:4700:4700::1001")
