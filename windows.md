@@ -2,6 +2,24 @@
 
 [Set up your development environment on Windows](https://docs.microsoft.com/en-us/windows/dev-environment/)
 
+
+
+## Dns
+
+Checkout your interface aliases
+
+```bash
+Get-DnsClient
+Get-DnsClientServerAddress -InterfaceAlias "Ethernet"
+```
+
+Setup [Cloudflare DNS](https://1.1.1.1/dns/)
+
+```bash
+Set-DnsClientServerAddress -InterfaceAlias "Ethernet" -ServerAddresses ("1.1.1.1","1.0.0.1", "2606:4700:4700::1111", "2606:4700:4700::1001")
+Clear-DnsClientCache
+```
+
 ## Windows Package Manager
 
 Install [winget](https://docs.microsoft.com/en-us/windows/package-manager/winget/#install-winget)
@@ -14,7 +32,7 @@ Install [winget](https://docs.microsoft.com/en-us/windows/package-manager/winget
 
 ### DirectX
 
-
+* [Website](https://www.microsoft.com/en-us/download/details.aspx?id=35)
 
 ## Fonts
 
