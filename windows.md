@@ -12,6 +12,10 @@ Install [winget](https://docs.microsoft.com/en-us/windows/package-manager/winget
 
 [Unstable Pack](https://winstall.app/packs/lgSgBgqWf)
 
+### DirectX
+
+
+
 ## Fonts
 
 [Fira Code](https://github.com/tonsky/FiraCode/wiki/Installing#windows)
