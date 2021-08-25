@@ -58,11 +58,21 @@ Invoke-WebRequest -Uri "https://gist.githubusercontent.com/unstablectrl/4b0e8f08
 
 ### PowerShell
 
-[Oh My Posh](https://ohmyposh.dev/docs/)
+[Create a PowerShell profile](https://docs.microsoft.com/en-us/powershell/module/microsoft.powershell.core/about/about_profiles?view=powershell-7.1#how-to-create-a-profile)
 
 ```bash
- Install-Module -Name PSReadLine -Scope CurrentUser -Force -SkipPublisherCheck
+if (!(Test-Path -Path $PROFILE)) {
+  New-Item -ItemType File -Path $PROFILE -Force
+}
 ```
+
+Give access for user to be able to run `.ps1` scripts
+
+```bash
+Set-ExecutionPolicy -ExecutionPolicy Unrestricted
+```
+
+[Oh My Posh](https://ohmyposh.dev/docs/)
 
 {% code title="~/Documents/WindowsPowerShell/Microsoft.PowerShell\_profile.ps1" %}
 ```bash
@@ -71,4 +81,6 @@ Import-Module oh-my-posh
 Set-Theme Paradox
 ```
 {% endcode %}
+
+
 
