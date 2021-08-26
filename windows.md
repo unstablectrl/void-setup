@@ -61,9 +61,10 @@ Invoke-WebRequest -Uri "https://gist.githubusercontent.com/unstablectrl/4b0e8f08
 [Create a PowerShell profile](https://docs.microsoft.com/en-us/powershell/module/microsoft.powershell.core/about/about_profiles?view=powershell-7.1#how-to-create-a-profile)
 
 ```bash
-if (!(Test-Path -Path $PROFILE)) {
-  New-Item -ItemType File -Path $PROFILE -Force
+if (!(Test-Path -Path $PROFILE.CurrentUserAllHosts)) {
+  New-Item -ItemType File -Path $PROFILE.CurrentUserAllHosts -Force
 }
+code $PROFILE.CurrentUserAllHosts
 ```
 
 Give access for user to be able to run `.ps1` scripts
@@ -74,11 +75,17 @@ Set-ExecutionPolicy -ExecutionPolicy Unrestricted
 
 [Oh My Posh](https://ohmyposh.dev/docs/)
 
-{% code title="~/Documents/WindowsPowerShell/Microsoft.PowerShell\_profile.ps1" %}
+{% code title="~/Documents/WindowsPowerShell/profile.ps1" %}
 ```bash
-Import-Module posh-git
-Import-Module oh-my-posh
-Set-Theme Paradox
+$OhMyPoshThemesFolder = "$Env:USERPROFILE\AppData\Local\Programs\oh-my-posh\themes\"
+$OhMyPoshTheme = "tonybaloney"
+$OhMyPoshConfig = Join-Path $OhMyPoshThemesFolder "$OhMyPoshTheme.omp.json"
+oh-my-posh --init --shell pwsh --config $OhMyPoshConfig | Invoke-Expression
+
+function Pro {code $PROFILE.CurrentUserAllHosts}
+
+function Src {. $PROFILE.CurrentUserAllHosts}
+
 ```
 {% endcode %}
 
