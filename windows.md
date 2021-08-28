@@ -75,7 +75,7 @@ Set-ExecutionPolicy -ExecutionPolicy Unrestricted
 
 [Oh My Posh](https://ohmyposh.dev/docs/)
 
-{% code title="~/Documents/WindowsPowerShell/profile.ps1" %}
+{% code title="~/Documents/PowerShell/profile.ps1" %}
 ```bash
 $OhMyPoshThemesFolder = "$Env:USERPROFILE\AppData\Local\Programs\oh-my-posh\themes\"
 $OhMyPoshTheme = "tonybaloney"
