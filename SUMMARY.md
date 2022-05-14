@@ -1,6 +1,18 @@
 # Table of contents
 
 * [Index](README.md)
-* [Ubuntu](ubunto.md)
-* [Windows](windows.md)
 
+## 🍏 macOS
+
+* [🔧 Setup](macos/setup.md)
+* [🛠 Tools](macos/tools.md)
+* [🧩 Apps](macos/apps.md)
+* [⚙ System](macos/system.md)
+
+## 🐧 Ubuntu
+
+* [Ubuntu](ubuntu/ubunto.md)
+
+## 🪟 Windows
+
+* [Windows](windows/windows.md)
